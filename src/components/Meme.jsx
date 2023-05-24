@@ -31,8 +31,8 @@ export default function Meme() {
   }, []);
 
   return (
-    <main>
-      <div className="grid grid-cols-2 gap-5 mb-5 mt-3 p-5 ">
+    <main className="flex h-full items-center justify-between bg-gradient-to-b from-purple-700 to-purple-300">
+      <div className="grid grid-cols-2 gap-5 mb-5 mt-3 ml-10 p-5 h-full">
         <input
           className="border-2 border-gray-300 indent-1.5 rounded-md"
           type="text"
@@ -50,15 +50,15 @@ export default function Meme() {
           value={meme.bottomText}
         />
         <button
-          className="col-span-full rounded-md bg-gradient-to-r from-purple-700 to-purple-900 text-white border-none cursor-pointer h-7"
+          className="col-span-2 rounded-md bg-gradient-to-r from-purple-700 to-purple-900 text-white border-none cursor-pointer h-10"
           onClick={getImage}
         >
           Get an image
         </button>
       </div>
-      <div className="relative p-20">
+      <div className="relative m-4 p-5 w-[800px] aspect-w-[16] aspect-h-[9] h-[600px] items-center">
         <img
-          className="max-w-full rounded-md"
+          className="w-full h-full rounded-md m-0 object-contain"
           src={meme.randomImageUrl}
           alt="Random-img"
         />
